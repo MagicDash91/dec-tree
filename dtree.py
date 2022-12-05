@@ -15,8 +15,8 @@ X = df.drop('Outcome', axis=1)
 y = df['Outcome']
 
 split23 = st.sidebar.slider('Choose the test size', 1, 99, 10)
-splittrain = 100 - split
-split2 = split/100
+splittrain = 100 - split23
+split2 = split23/100
 rd = st.sidebar.slider('Choose the train test split random state', 0, 42, 0)
 
 st.sidebar.write("**Decision Tree Parameters**")
