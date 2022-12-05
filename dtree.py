@@ -14,7 +14,7 @@ st.dataframe(df)
 X = df.drop('Outcome', axis=1)
 y = df['Outcome']
 
-split = st.sidebar.slider('Choose the test size', 1, 99, 10)
+split2 = st.sidebar.slider('Choose the test size', 1, 99, 10)
 splittrain = 100 - split
 split2 = split/100
 rd = st.sidebar.slider('Choose the train test split random state', 0, 42, 0)
@@ -27,7 +27,7 @@ crit = st.sidebar.selectbox("Choose your Decision Tree Criterion :",('gini', 'en
 split = st.sidebar.selectbox("Choose your Decision Tree Splitter :",('best', 'random'))
 
 st.write("Your train size : ", splittrain)
-st.write("Your test size : ", split)
+st.write("Your test size : ", split2)
 st.write("Your train test split random state : ", rd)
 st.write("Your Decision Tree random state : ", rd2)
 st.write("Your Decision Tree Maximum Depth : ", max_d)
