@@ -54,14 +54,17 @@ f1 = f1_score(y_test, y_pred)
 prec = precision_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred)
 
+f12 = f1*100
+prec2 = prec*100
+recall2 = recall*100
 
 st.write("**Algorithm Accuracy in (%)**")
 st.info(acc)
 st.write("**Precision**")
-st.info(prec)
+st.info(prec2)
 st.write("**Recall**")
-st.info(recall)
+st.info(recall2)
 st.write("**F-1 Score**")
-st.info(f1)
+st.info(f12)
 st.write("**Confusion Matrix**")
 st.write(fig)
