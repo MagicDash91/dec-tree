@@ -54,9 +54,9 @@ f1 = f1_score(y_test, y_pred)
 prec = precision_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred)
 
-f12 = f1*100
-prec2 = prec*100
-recall2 = recall*100
+f12 = round(f1*100,2)
+prec2 = round(prec*100,2)
+recall2 = round(recall*100,2)
 
 st.write("**Algorithm Accuracy in (%)**")
 st.info(acc)
