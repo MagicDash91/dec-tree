@@ -66,7 +66,7 @@ graph = graphviz.Source(dot_data)
 dot_data = tree.export_graphviz(dtree, out_file=None,     
 filled=True, rounded=True,  
 special_characters=True)  
-graph = graphviz.Source(dot_data) 
+graph = graphviz.source(dot_data) 
 
 
 st.write("**Algorithm Accuracy in (%)**")
@@ -82,5 +82,5 @@ st.write(figure)
 st.write("**Feature Importance**")
 st.bar_chart(dtree.feature_importances_)
 st.write("**Decision Tree**")
-st.graphviz_chart(dot_data)
+st.graphviz_chart(graph)
 
