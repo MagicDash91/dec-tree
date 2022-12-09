@@ -58,7 +58,7 @@ f12 = round(f1*100,2)
 prec2 = round(prec*100,2)
 recall2 = round(recall*100,2)
 
-fi = plt.bar(dtree.feature_importances_)
+fi = plt.bar(dtree.feature_importances_, width=0.4)
 
 st.write("**Algorithm Accuracy in (%)**")
 st.info(acc)
