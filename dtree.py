@@ -62,7 +62,7 @@ import graphviz
 from sklearn import tree
 # DOT data
 dot_data = tree.export_graphviz(dtree, out_file=None, 
-                                feature_names=X_train,  
+                                feature_names=None,  
                                 class_names=y_train,
                                 filled=True)
 # Draw graph
