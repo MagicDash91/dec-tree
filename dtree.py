@@ -58,10 +58,15 @@ f12 = round(f1*100,2)
 prec2 = round(prec*100,2)
 recall2 = round(recall*100,2)
 
-import graphviz
+from sklearn import tree
 from sklearn.tree import plot_tree
-dec_tree = plot_tree(decision_tree=dtree, feature_names = df.columns, 
-                     class_names =["0", "1"] , filled = True , precision = 4, rounded = True)
+import graphviz 
+dot_data = tree.export_graphviz(clf, out_file=None) 
+graph = graphviz.Source(dot_data) 
+dot_data = tree.export_graphviz(clf, out_file=None,     
+filled=True, rounded=True,  
+special_characters=True)  
+graph = graphviz.Source(dot_data) 
 
 
 st.write("**Algorithm Accuracy in (%)**")
@@ -77,5 +82,5 @@ st.write(figure)
 st.write("**Feature Importance**")
 st.bar_chart(dtree.feature_importances_)
 st.write("**Decision Tree**")
-dec_tree
+graph
 
