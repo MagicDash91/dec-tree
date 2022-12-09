@@ -59,6 +59,7 @@ prec2 = round(prec*100,2)
 recall2 = round(recall*100,2)
 
 import graphviz
+from sklearn import tree
 # DOT data
 dot_data = tree.export_graphviz(dtree, out_file=None, 
                                 feature_names=X_train,  
