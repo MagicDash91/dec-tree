@@ -66,7 +66,7 @@ graph = graphviz.Source(dot_data)
 dot_data = tree.export_graphviz(dtree, out_file=None,     
 filled=True, rounded=True,  
 special_characters=True)  
-graph = graphviz.source(dot_data) 
+graph = graphviz.Source(dot_data) 
 
 
 st.write("**Algorithm Accuracy in (%)**")
