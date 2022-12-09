@@ -62,8 +62,7 @@ import graphviz
 from sklearn.tree import plot_tree
 dec_tree = plot_tree(decision_tree=dtree, feature_names = df.columns, 
                      class_names =["0", "1"] , filled = True , precision = 4, rounded = True)
-# Draw graph
-graph = graphviz.Source(dot_data, format="png") 
+
 
 st.write("**Algorithm Accuracy in (%)**")
 st.info(acc)
