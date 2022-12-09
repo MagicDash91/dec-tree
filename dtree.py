@@ -59,12 +59,9 @@ prec2 = round(prec*100,2)
 recall2 = round(recall*100,2)
 
 import graphviz
-from sklearn import tree
-# DOT data
-dot_data = tree.export_graphviz(dtree, out_file=None, 
-                                feature_names=None,  
-                                class_names=y_train,
-                                filled=True)
+from sklearn.tree import plot_tree
+dec_tree = plot_tree(decision_tree=dtree, feature_names = df.columns, 
+                     class_names =["0", "1"] , filled = True , precision = 4, rounded = True)
 # Draw graph
 graph = graphviz.Source(dot_data, format="png") 
 
@@ -81,4 +78,4 @@ st.write(fig)
 st.write("**Feature Importance**")
 st.bar_chart(dtree.feature_importances_)
 st.write("**Decision Tree**")
-st.write(graph)
+st.write(dec_tree)
