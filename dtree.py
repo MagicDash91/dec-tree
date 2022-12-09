@@ -72,9 +72,10 @@ st.write("**Recall (%)**")
 st.info(recall2)
 st.write("**F-1 Score (%)**")
 st.info(f12)
+st.write("**Confusion Matrix (%)**")
+st.write(figure)
 st.write("**Feature Importance**")
 st.bar_chart(dtree.feature_importances_)
 st.write("**Decision Tree**")
 dec_tree
-#st.write("**Confusion Matrix (%)**")
-#st.write(figure)
+
