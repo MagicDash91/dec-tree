@@ -58,7 +58,7 @@ f12 = round(f1*100,2)
 prec2 = round(prec*100,2)
 recall2 = round(recall*100,2)
 
-fi = plt.barh(X_train, dtree.feature_importances_)
+fi = plt.barh(dtree.feature_importances_)
 
 st.write("**Algorithm Accuracy in (%)**")
 st.info(acc)
