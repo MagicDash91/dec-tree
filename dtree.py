@@ -77,4 +77,4 @@ st.write(fig)
 st.write("**Feature Importance**")
 st.bar_chart(dtree.feature_importances_)
 st.write("**Decision Tree**")
-st.write(dec_tree)
+dec_tree
