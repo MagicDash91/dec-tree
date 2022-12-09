@@ -58,6 +58,15 @@ f12 = round(f1*100,2)
 prec2 = round(prec*100,2)
 recall2 = round(recall*100,2)
 
+import graphviz
+# DOT data
+dot_data = tree.export_graphviz(dtree, out_file=None, 
+                                feature_names=X_train,  
+                                class_names=y_train,
+                                filled=True)
+# Draw graph
+graph = graphviz.Source(dot_data, format="png") 
+
 st.write("**Algorithm Accuracy in (%)**")
 st.info(acc)
 st.write("**Precision (%)**")
@@ -70,3 +79,5 @@ st.write("**Confusion Matrix (%)**")
 st.write(fig)
 st.write("**Feature Importance**")
 st.bar_chart(dtree.feature_importances_)
+st.write("**Decision Tree**")
+st.write(graph)
